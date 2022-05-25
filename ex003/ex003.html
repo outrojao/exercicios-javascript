@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body{
+            background-color: brown;
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1{
+            color: rgb(255, 161, 224);
+            text-shadow: 2px 2px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>sem maldição</p>
+    <script>
+        var n1 = Number(window.prompt('Digite um número:')) //String
+        var n2 = Number(window.prompt('Digite outro número:')) //String
+        //Number.parseInt() converte a string para um número inteiro
+        //Number.parseFloat() converte a string para um número real ex:5.5
+        //Number() faz com que o javascript decida qual tipo de number usar de acordo com o valor digitado
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é ${s}`)
+        //.toString() converte um number para uma string
+        //String(n) converte um number para uma string
+        
+        
+        //Concatenação
+        // number + number para adição
+        // string + string para concatenação
+    </script>
+</body>
+</html>

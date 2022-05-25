@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: black;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado:</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var corpo = window.document.body //corpo recebe o body
+        /*corpo.style.background = 'gray' //muda a cor do body por meio de javascript*/
+
+        var p1 = window.document.getElementsByTagName('p')[1] //seleciona todas as tags p do codigo e os [] servem para definir uma tag especifica de acordo com sua numeração
+        /*
+        p1.style.color = 'blue' //muda a cor da tag p por meio de javascript
+        window.document.writeln(`Está escrito assim: ${p1.innerText}`) //mostra na tela o que esta escrito na tag p, ja que anteriormente nos a selecionamos por meio do comando getElemenstByTagName
+        window.document.writeln(`Agora estou puxando a formatação do HTML: ${p1.innerHTML}`) // o innerHTML diferente do innerText além de puxar o que está escrito na tag tbm puxa a formatação dela no código HTML, como no exempo foi pego também a tag strong
+        */
+
+        /*
+        var d = window.document.getElementById('msg') //seleciona a tag div utilizando seu IDque no caso é msg
+        d.style.background = 'green' //muda a cor da div
+        d.innerText = 'Olá' // muda o texto da div
+        window.document.getElementById('msg').innerText = 'Chungus melonis' //faz a mesma coisa do comando anterior mais aparentemente de uma maneira mais segura
+        */
+
+        /*
+        var d = window.document.getElementsByName('msg')[0] //seleciona a div buscando pelo seu name q no caso é msg, por conat de ser um comando q seleciona mais de 1 elemento é necessário o uso dos colchetes
+        d.innerText = 'Olá!'
+        */
+
+        /*
+        var d = window.document.getElementsByClassName('msg')[0] //seleciona a div buscando pelo sua class q é msg, por conta de ser um comando q seleciona mais de 1 elemento é necessário o uso dos colchetes
+        d.innerText = 'Olá!'
+        */
+
+        var d = window.document.querySelector('div#msg') // seleciona a div da mesma forma que um seletor de CSS, colocando primeiro qual tag que é e dps o ID (#) ou class(.)
+        d.style.color = 'grey'
+        d.style.background = 'blue'
+
+    </script>
+</body>
+</html>
