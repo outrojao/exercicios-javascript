@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro ou Brasileiro?</title>
+    <style>
+        body{
+            text-align: center;
+            font: normal 20pt Arial;
+            background: #333;
+            color: white;
+        }
+        h1{
+            text-shadow: 2px 2px 2px brown;
+        }
+        input#txtpais{
+            border-radius: 10px;
+            width: 100px;
+        }
+        input#button{
+            background: green;
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+        <div id="interface">
+            <h1>Sistema de Estrangeiros</h1>
+            <p>Coloque o seu país de origem: <input type="text" name="txtpais" id="txtpais"></p>
+            <input type="button" value="Verificar" onclick="averiguar()" id="button">
+            <div id="res"></div>
+        </div>
+
+        <script>
+            function averiguar(){
+                var txtp = window.document.getElementById('txtpais')
+                var país = txtp.value
+                var res = window.document.querySelector('div#res')
+                res.innerHTML = `<p>Vivendo em <strong>${país}</strong></p>`
+                if (país == 'Brasil'){
+                    res.innerHTML += '<p>Você é <strong>Brasileiro</strong></p>'
+                }else{
+                    res.innerHTML += '<p>Você é <strong>Estrangeiro</strong></p>'
+                }
+            }
+        </script>
+</body>
+</html>
