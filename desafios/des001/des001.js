@@ -1,7 +1,20 @@
-var horaAtual = new Date()
-var hora = horaAtual.getHours()
-var fundo = window.document.body
-
-if (horaAtual < 12){
-    fundo.style.background = 'yellow'
+function carregar(){
+    var msg = window.document.getElementById('msg')
+    var img = window.document.getElementById('imagem')
+    var data = new Date()
+    var hora = data.getHours()
+    msg.innerHTML = `Agora são ${hora} horas`
+    if (hora >= 0 && hora < 12){
+        //BOM DIA
+        img.src = 'imagens/manha.png'
+        document.body.style.background = '#f3a271'
+    } else if (hora >= 12 && hora <= 18){
+        //BOA TARDE
+        img.src = 'imagens/tarde.png'
+        document.body.style.background = '#c4b3a4'
+    } else {
+        //BOA NOITE
+        img.src = 'imagens/noite.png'
+        document.body.style.background = '#081a24'
+    }
 }
