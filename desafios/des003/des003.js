@@ -1,25 +1,20 @@
 function contar(){
     var txtinicio = document.getElementById('txtinicio')
-    var txtfim = document.body.querySelector('input#txtfim')
+    var txtfim = document.getElementById('txtfim')
     var txtpasso = document.getElementById('txtpasso')
+    var res = document.getElementById('res')
 
-    if (txtinicio.value.length == 0 || txtfim.value.length == 0){
-        alert('Bota numero ai fi')
-    } else if (txtpasso.value.length == 0){
-        alert('Bota numero ai fi')
+    if (txtinicio.value.length == 0 || txtfim.value.length == 0 || txtpasso.value.length == 0){
+        alert('Insira os números')
     } else {
         var inicio = Number(txtinicio.value)
         var fim = Number(txtfim.value)
         var passo = Number(txtpasso.value)
-        var res = document.getElementById('res')
-        var n = 0
+        res.innerHTML = 'Contando: '
 
-        while(inicio < fim){
-        res.innerHTML = `${inicio.charAt(n)}`
-        //inicio += passo
-        n++
-        }
-
+       for(c = inicio; c <= fim; c += passo){
+           res.innerHTML = `${c} `
+       }
     }
         
 }
