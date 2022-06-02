@@ -32,3 +32,8 @@
 //     console.log(`${c}`)
 //     c++
 // } while (c != 6)
+
+    var n = 0
+    for ( var i = 0; i < 5; i++ ) { 
+        console.log( i );
+    }

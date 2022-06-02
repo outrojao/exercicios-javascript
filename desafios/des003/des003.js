@@ -12,11 +12,12 @@ function contar(){
         var fim = Number(txtfim.value)
         var passo = Number(txtpasso.value)
         var res = document.getElementById('res')
-        var span = document.createElement('span')
+        var n = 0
 
         while(inicio < fim){
-        res.innerHTML = `${inicio} 👉 ${inicio} 👉 ${inicio}`
-        inicio += passo
+        res.innerHTML = `${inicio.charAt(n)}`
+        //inicio += passo
+        n++
         }
 
     }
