@@ -13,7 +13,7 @@ function contar(){
         res.innerHTML = 'Contando: '
 
        for(c = inicio; c <= fim; c += passo){
-           res.innerHTML = `${c} `
+           res.innerHTML += `${c} `
        }
     }
         
