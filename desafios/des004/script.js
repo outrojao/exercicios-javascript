@@ -3,9 +3,9 @@ function tabuada(){
     let tab = document.getElementById('seltab') //da a let tab a função de representante da tag select em html no js
     let msg = document.getElementById('msg') //armazena a texto principal (h1) no codigo para que possa ser feitas alterações
 
-    if( num.value.length ==0 ){ // caso a caixa de texto esteja vazia o usuario será notificado
+    if( num.value.length == 0 ){ // caso a caixa de texto esteja vazia o usuario será notificado
         msg.innerHTML = 'Digite um número >:(' // muda o conteudo do h1
-    } else { // caso a caixa de texto tenha um núemro a seguinte executação será feita
+    } else { // caso a caixa de texto tenha um número a seguinte executação será feita
         msg.innerHTML = 'Tabuada' // retorna ao h1 seu valor inical
         let n = Number(num.value) // converta o valor do num que é string para number para que os calculos possam ser realizados
         let c = 1 // define o contador como 1 para que possa ser aumentado gradativamente
