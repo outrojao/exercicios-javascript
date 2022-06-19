@@ -1,7 +1,2 @@
-var array = []
-
-for(var c = 1; c <= 10; c++){
-    array.push(c)
-}
-
-console.log(array)
+var n1 = 300.00
+console.log(n1.toLocaleString('pt-BR',{style:'currency', currency:'BRL'}))
