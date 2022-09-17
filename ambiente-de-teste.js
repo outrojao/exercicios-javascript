@@ -5,6 +5,7 @@ const encontrarUm = numeros.find(numero => numero === 1)
 const encontrarPosicao = numeros.findIndex(numero => numero === 1)
 const temImpar = numeros.some(numero => numero % 2 !== 0)
 const todosPar = numeros.every(numero => numero % 2 === 0)
+const depoisDeUmSoBruh = numeros.fill('bruh', 1)
 
 const manipulandoArrays = [
     numerosVezesDois,
@@ -12,7 +13,8 @@ const manipulandoArrays = [
     encontrarUm,
     encontrarPosicao,
     temImpar,
-    todosPar
+    todosPar,
+    depoisDeUmSoBruh
 ]
 
 manipulandoArrays.forEach(arrayManipulado => console.log(arrayManipulado))
