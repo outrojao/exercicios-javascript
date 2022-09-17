@@ -1,16 +1,18 @@
-const tarefas = [
-    {
-        completed: true
-    },
-    {
-        completed: true
-    },
-    {
-        completed: false
-    }
+const numeros = [1, 2, 3, 4, 5]
+const numerosVezesDois = numeros.map(numero => numero * 2)
+const numerosPares = numeros.filter(numero => numero % 2 === 0)
+const encontrarUm = numeros.find(numero => numero === 1)
+const encontrarPosicao = numeros.findIndex(numero => numero === 1)
+const temImpar = numeros.some(numero => numero % 2 !== 0)
+const todosPar = numeros.every(numero => numero % 2 === 0)
+
+const manipulandoArrays = [
+    numerosVezesDois,
+    numerosPares,
+    encontrarUm,
+    encontrarPosicao,
+    temImpar,
+    todosPar
 ]
 
-const tarefasCompleted = tarefas.filter(tarefa => tarefa.completed)
-if(tarefasCompleted.length >= 2){
-    console.log('Parabens vc ganhou um trofeu')
-}
+manipulandoArrays.forEach(arrayManipulado => console.log(arrayManipulado))
